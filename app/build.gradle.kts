@@ -1,6 +1,6 @@
 plugins {
-    application
     id("java")
+    application
 }
 
 group = "hexlet.code"
