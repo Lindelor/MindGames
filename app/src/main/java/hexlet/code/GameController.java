@@ -48,4 +48,20 @@ public class GameController {
         return Integer.parseInt(result);
     }
 
+    public String play(int currentGameNumber, String name) throws Exception {
+        if (currentGameNumber > getGames().length || currentGameNumber < 0) {
+            throw new Exception("Invalid game number");
+        }
+        if (currentGameNumber == 0) {
+            return "bye!";
+        }
+        if (getGames()[currentGameNumber - 1].equals("Greet")) {
+            System.out.println("Welcome to the Brain Games!");
+            return GameSet.askName();
+        } else if (getGames()[currentGameNumber - 1].equals("Even")) {
+            return GameSet.evenGame(name);
+        }
+        return "bye!";
+    }
+
 }
