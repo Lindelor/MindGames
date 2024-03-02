@@ -15,6 +15,8 @@ public class App {
                     var result = gameController.play(currentGameNumber, "Unknown person");
                     if (currentGameNumber == 1) {
                         name = result;
+                    } else {
+                        System.out.println(result);
                     }
                 } else {
                     var result = gameController.play(currentGameNumber, name);
