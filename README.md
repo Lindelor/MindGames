@@ -1,3 +1,7 @@
-### Hexlet tests and linter status:
-[![Actions Status](https://github.com/Lindelor/java-project-61/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/Lindelor/java-project-61/actions)
 [![Maintainability](https://api.codeclimate.com/v1/badges/c423c59804ae35cc83b6/maintainability)](https://codeclimate.com/github/Lindelor/java-project-61/maintainability)
+
+Проект предоставляет пользователю возможность выполнять следующие действия:
+    1) Указывать свое имя для персонализации в играх.
+    2) Запускать игру "Even", в которой пользователь должен дать ответ на вопрос: "Являются ли представленные числа четными".
+    3) Запускать игру "Calc", в которой пользователь должен посчитать сумму 2 чисел и предоставить ответ.
+Игра завершает при предоставлении 3 правильных ответ подряд, после чего пользователь возвращается в главное меню.
