@@ -2,7 +2,15 @@ package hexlet.code;
 
 public class App {
     public static void main(String[] args) {
-        System.out.println("Welcome to the Brain Games!");
-        var username = Cli.askName();
+        String[] games = {"Greet"};
+        GameController gameController = new GameController(games);
+        int currentGameNumber = gameController.gamePick();
+
+        if (currentGameNumber == 1) {
+            System.out.println("Welcome to the Brain Games!");
+            var username = Cli.askName();
+        }
+
     }
+
 }
