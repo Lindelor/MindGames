@@ -2,7 +2,7 @@ package hexlet.code;
 
 public class App {
     public static void main(String[] args) {
-        String[] games = {"Greet", "Even"};
+        String[] games = {"Greet", "Even", "Calc"};
         GameController gameController = new GameController(games);
         String name = null;
         while (true) {

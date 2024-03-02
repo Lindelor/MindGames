@@ -60,8 +60,18 @@ public class GameController {
             return GameSet.askName();
         } else if (getGames()[currentGameNumber - 1].equals("Even")) {
             return GameSet.evenGame(name);
+        } else if (getGames()[currentGameNumber - 1].equals("Calc")) {
+            return GameSet.calcGame(name);
         }
         return "bye!";
+    }
+
+    public static void wrongResult() {
+        System.out.println("Wrong answer ;(\n" + "Let's try again");
+    }
+
+    public static String win(String name) {
+        return String.format("Congratulations, %s!", name);
     }
 
 }
