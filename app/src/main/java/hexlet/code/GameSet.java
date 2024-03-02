@@ -30,6 +30,7 @@ public class GameSet {
                 score += 1;
             } else {
                 score = 0;
+                System.out.println("Wrong answer ;(\n" + "Let's try again");
             }
         }
 
