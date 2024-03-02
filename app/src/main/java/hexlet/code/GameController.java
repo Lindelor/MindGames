@@ -66,12 +66,4 @@ public class GameController {
         return "bye!";
     }
 
-    public static void wrongResult() {
-        System.out.println("Wrong answer ;(\n" + "Let's try again");
-    }
-
-    public static String win(String name) {
-        return String.format("Congratulations, %s!", name);
-    }
-
 }

@@ -15,12 +15,12 @@ public class GameSet {
 
     public static String evenGame(String name) {
         Random random = new Random();
-        System.out.println("Answer 'yes' if the number is even, otherwise answer 'no'.");
+        GameOutput.initMessage("Answer 'yes' if the number is even, otherwise answer 'no'.");
         var score = 0;
 
         while (score < 3) {
             var currentNumber = random.nextInt(200);
-            System.out.println(String.format("Question: %d", currentNumber));
+            GameOutput.askQuestion(String.format("Question: %d", currentNumber));
             Scanner in = new Scanner(System.in);
             var result = in.nextLine();
 
@@ -29,39 +29,39 @@ public class GameSet {
             } else if (result.equals("no") && currentNumber % 2 == 1) {
                 score += 1;
             } else {
-                GameController.wrongResult();
+                GameOutput.wrongResult();
                 score = 0;
             }
         }
 
-        return GameController.win(name);
+        return GameOutput.win(name);
     }
 
     public static String calcGame(String name) {
         Random random = new Random();
-        System.out.println("What is the result of the expression?");
+        GameOutput.initMessage("What is the result of the expression?");
         var score = 0;
 
         while (score < 3) {
             var a = random.nextInt(200);
             var b = random.nextInt(200);
-            System.out.println(String.format("Question: %d + %d", a, b));
+            GameOutput.askQuestion(String.format("Question: %d + %d", a, b));
             Scanner in = new Scanner(System.in);
             try {
                 var result = Integer.parseInt(in.nextLine());
                 if (result == a + b) {
                     score += 1;
                 } else {
-                    GameController.wrongResult();
+                    GameOutput.wrongResult();
                     score = 0;
                 }
             } catch (NumberFormatException e) {
-                GameController.wrongResult();
+                GameOutput.wrongResult();
                 score = 0;
             }
 
         }
-        return GameController.win(name);
+        return GameOutput.win(name);
     }
 
 }
